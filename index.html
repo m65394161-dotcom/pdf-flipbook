@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محول الـ PDF إلى كتاب تفاعلي</title>
+    
+    <!-- ربط ملف التنسيقات الخارجية CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- استدعاء المكتبات الخارجية عبر CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/page-flip@0.8.8/dist/js/page-flip.browser.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>عارض الكتب التفاعلي</h1>
+        <p>قم برفع ملف PDF لتحويله إلى كتاب إلكتروني قابل للتقليب</p>
+    </header>
+
+    <!-- منطقة رفع الملف -->
+    <div class="upload-section">
+        <label for="pdf-input" class="custom-file-upload">
+            اختر ملف PDF
+        </label>
+        <input type="file" id="pdf-input" accept="application/pdf">
+        <span id="loading-status">لم يتم اختيار ملف بعد</span>
+    </div>
+
+    <!-- حاوية عرض الكتاب -->
+    <div class="book-container">
+        <div id="flipbook"></div>
+    </div>
+
+    <!-- ربط ملف البرمجة والتفاعل JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
